@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MovieXpress| Dashboard</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    .card { border-radius: 10px; }
+    .btn-group .btn { margin: 2px; }
+    .small-text { font-size: 0.8rem; }
+  </style>
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+  <div class="wrapper">
+
+    <!-- Preloader -->
+    <div class="preloader flex-column justify-content-center align-items-center">
+      <img class="animation__shake" src="dist/img/file.png" alt="MovieXpress" height="100" width="100">
+    </div>
+
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+      <!-- Left navbar links -->
+      <!-- Right navbar links -->
+      <ul class="navbar-nav ml-auto">
+        <!-- Navbar Search -->
+        <li class="nav-item">
+          <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+            <i class="fas fa-search"></i>
+          </a>
+          
+        </li>
+
+        <!-- Messages Dropdown Menu -->
+        <!-- Notifications Dropdown Menu -->
+        
+        
+        
+      </ul>
+    </nav>
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-link">
+        <img src="dist/img/file.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+        <span class="brand-text font-weight-light">MovieXpress</span>
+      </a>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <!-- Sidebar user panel (optional) -->
+        <!-- <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">Alexander Pierce</a>
+        </div>
+      </div> -->
+
+        <!-- SidebarSearch Form -->
+        <div class="form-inline">
+          <!-- <div class="input-group" data-widget="sidebar-search">
+          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-sidebar">
+              <i class="fas fa-search fa-fw"></i>
+            </button>
+          </div>
+        </div> -->
+        </div>
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+            <li class="nav-item menu-open">
+              <a href="index.html" class="nav-link">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                  Dashboard
+                </p>
+              </a>
+            </li>
+
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-film outline"></i>
+                <p>
+                  Movies
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="addmovies.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Add Movies</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="addscreen.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Add Screen</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="addtheatre.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Add Theatre</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="slider.html" class="nav-link">
+                <i class="nav-icon fas fa-table"></i>
+                <p>
+                  Slider
+                  <!-- <i class="fas fa-angle-left right"></i> -->
+                </p>
+              </a>
+
+            </li>
+            <li class="nav-item">
+              <a href="users.html" class="nav-link">
+                <i class="nav-icon fas fa-user"></i>
+                <p>
+                  Users
+                  <i class=""></i>
+                </p>
+              </a>
+              <!-- <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/UI/general.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Admin User</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/UI/icons.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Client User</p>
+                </a>
+              </li>
+            </ul> -->
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-edit"></i>
+                <p>
+                  Details
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="pages/forms/general.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>General Elements</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="pages/forms/advanced.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Advanced Elements</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="pages/forms/editors.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Editors</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="pages/forms/validation.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Validation</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+          </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+      </div>
+      <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <div class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1 class="m-0" style="font-family: serif; font-weight: bold;">DASHBOARD</h1>
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a href="#" style="color: red;">Home</a></li>
+                <li class="breadcrumb-item active">Dashboard </li>
+              </ol>
+            </div><!-- /.col -->
+          </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+      </div>
+      <!-- /.content-header -->
+
+      <!-- Main content -->
+      <section class="content">
+        <div class="container-fluid">
+          <!-- Small boxes (Stat box) -->
+          <div class="row">
+            <div class="col-lg-3 col-6">
+              <div class="small-box bg-success">
+                <div class="inner">
+                  <h3>120</h3>
+                  <p>Total Bookings</p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-document"></i>
+                </div>
+                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+
+            <!-- ./col -->
+            <div class="col-lg-3 col-6">
+              <div class="small-box bg-primary">
+                <div class="inner">
+                  <h3>$15,000</h3>
+                  <p>Total Revenue</p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-cash"></i>
+                </div>
+                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+
+            <!-- ./col -->
+            <div class="col-lg-3 col-6">
+              <div class="small-box bg-warning">
+                <div class="inner">
+                  <h3 style="color: white;">20</h3>
+                  <p style="color: white;">Active Screenings</p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-film-marker"></i>
+                </div>
+                <a href="#" class="small-box-footer" style="color: white;">More info <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+
+            <!-- ./col -->
+            <div class="col-lg-3 col-6">
+              <div class="small-box bg-info">
+                <div class="inner">
+                  <h3>35</h3>
+                  <p>New Feedback</p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-chatbubble"></i>
+                </div>
+                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Monthly Revenue Overview</h3>
+              </div>
+              <div class="card-body">
+                <canvas id="revenueChart" style="height: 230px; width: 100%;"></canvas>
+              </div>
+              </div>
+              <div class="col-lg-0.5 col-1"></div>
+              <div class="card">
+                <div class="card-body">
+                  <h5>Movie Types</h5>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <img src="dist/img/transformers.jpg" alt="Action Movies" style="width: 60%; height: 350px; border-radius: 8px;">
+                      <p style="text-align: center; margin-top: 8px; font-weight: bold; font-family: serif;">Action</p>
+                    </div>
+                    <div class="col-md-4">
+                      <img src="dist/img/bhool_bhulaiyaa_3_flicks.width-700.jpg" alt="Comedy Movies" style="width: 60%; height: 350px; border-radius: 8px;">
+                      <p style="text-align: center; margin-top: 8px; font-weight: bold; font-family: serif;">Comedy</p>
+                    </div>
+                    <div class="col-md-4">
+                      <img src="dist/img/stree2.jpg" alt="Drama Movies" style="width: 60%; height: 350px; border-radius: 8px;">
+                      <p style="text-align: center; margin-top: 8px; font-weight: bold; font-family: serif;">Drama</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="card">
+                    <div class="card-body">
+                      <h6>Walk-In Counter</h6>
+                      <p>In Ticket: 1,296</p>
+                      <p>Sold: 4,797</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card">
+                    <div class="card-body">
+                      <h6>Online Platforms</h6>
+                      <p>In Ticket: 958</p>
+                      <p>Sold: 7,732</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+          </div>
+
+
+
+          <!-- ./col -->
+        </div>
+        <!-- /.row -->
+        <!-- Main row -->
+
+        <!-- /.row (main row) -->
+    </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <strong>Copyright &copy; 2024 <a href="https://moviexpress.io">MovieXpress.io</a>.</strong>
+    All rights reserved.
+    <div class="float-right d-none d-sm-inline-block">
+      <!-- <b>Version</b> 3.2.0 -->
+    </div>
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+  </div>
+  <!-- ./wrapper -->
+
+  <!-- jQuery -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+  <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+  <script>
+    $.widget.bridge('uibutton', $.ui.button)
+  </script>
+  <!-- Bootstrap 4 -->
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- ChartJS -->
+  <script src="plugins/chart.js/Chart.min.js"></script>
+  <!-- Sparkline -->
+  <script src="plugins/sparklines/sparkline.js"></script>
+  <!-- JQVMap -->
+  <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+  <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+  <!-- jQuery Knob Chart -->
+  <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+  <!-- daterangepicker -->
+  <script src="plugins/moment/moment.min.js"></script>
+  <script src="plugins/daterangepicker/daterangepicker.js"></script>
+  <!-- Tempusdominus Bootstrap 4 -->
+  <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+  <!-- Summernote -->
+  <script src="plugins/summernote/summernote-bs4.min.js"></script>
+  <!-- overlayScrollbars -->
+  <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="dist/js/adminlte.js"></script>
+  <script>
+    // Example chart using Chart.js
+    var ctx = document.getElementById('revenueChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+        datasets: [{
+          label: 'Revenue',
+          data: [12000, 15000, 10000, 20000, 18000],
+          backgroundColor: 'rgba(54, 162, 235, 0.2)',
+          borderColor: 'rgba(54, 162, 235, 1)',
+          borderWidth: 2
+        }]
+      }
+    });
+  </script>
+  <script>
+    const ctx = document.getElementById('ticketSalesChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Jun 26', 'Jun 27', 'Jun 28', 'Jun 29', 'Jun 30', 'Jul 1', 'Jul 2'],
+        datasets: [{
+          label: 'Tickets Sold',
+          data: [500, 750, 900, 1200, 1000, 850, 950],
+          backgroundColor: '#007bff',
+        }]
+      },
+    });
+  </script>
+
+</body>
+
+</html>
